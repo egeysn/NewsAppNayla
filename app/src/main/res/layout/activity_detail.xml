@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <data>
+        <variable
+            name="detailViewModel"
+            type="com.egesoftware.newsappnayla.ui.detail.DetailViewModel" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="100dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="84dp"
+            android:background="@color/purple_500"
+            android:elevation="5dp"
+            android:rotationX="4"
+            app:cardBackgroundColor="@color/purple_500"
+            app:cardCornerRadius="7dp"
+            app:cardElevation="5dp"
+            app:cardUseCompatPadding="true"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tv_detail_category"
+                android:layout_width="88dp"
+                android:layout_height="43dp"
+                android:layout_gravity="center_horizontal"
+                android:fontFamily="@font/roboto_black"
+                android:gravity="center"
+                android:text="Travel"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/tv_detail_date"
+            android:layout_width="173dp"
+            android:layout_height="16dp"
+            android:layout_marginTop="28dp"
+            android:text="December 14, 2019 - 12:24"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.627"
+            app:layout_constraintStart_toEndOf="@+id/cardView"
+            app:layout_constraintTop_toTopOf="@+id/cardView" />
+
+        <TextView
+            android:id="@+id/tv_detail_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="23dp"
+            android:layout_marginTop="28dp"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:maxLines="4"
+            android:text="Bathing in Cleopatra's desert pool"
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+            android:textSize="35sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.128"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardView" />
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Destination Egypt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.059"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_detail_title" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView2"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="24dp"
+            android:padding="5dp"
+            android:elevation="25dp"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="8dp"
+            app:cardMaxElevation="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView9">
+
+            <ImageView
+                android:elevation="20dp"
+                android:id="@+id/detailImageView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                tools:srcCompat="@tools:sample/backgrounds/scenic" />
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/tv_description_detail"
+            android:scrollbars="vertical"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="16dp"
+            android:text="@string/test_text"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardView2" />
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbarDetail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:layout_marginTop="6dp"
+            android:padding="15dp"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+                <ImageButton
+                    android:id="@+id/detail_back_button"
+                    android:layout_gravity="start"
+                    android:background="@color/white"
+                    android:src="@drawable/ic_baseline_arrow_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+                </ImageButton>
+
+                <LinearLayout
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_gravity="end"
+                    android:gravity="end"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+                    <ImageButton
+                        android:id="@+id/share_detail"
+                        android:layout_marginHorizontal="30dp"
+                        android:layout_gravity="start"
+                        android:background="@color/white"
+                        android:src="@drawable/ic_baseline_share"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent">
+
+                    </ImageButton>
+                    <ImageButton
+                        android:id="@+id/add_bookmark"
+                        android:layout_gravity="start"
+                        android:background="@color/white"
+                        android:src="@drawable/ic_baseline_bookmark_border"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent">
+
+                    </ImageButton>
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
